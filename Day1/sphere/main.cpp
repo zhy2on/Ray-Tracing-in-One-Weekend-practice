@@ -11,7 +11,7 @@ bool hit_sphere(const vec3& center, double radius, const ray& r) {
   return (discriminant > 0);
 }
 
-vec3 color(const ray& r) {
+vec3 ray_color(const ray& r) {
 	if (hit_sphere(vec3(0, 0, -1), 0.5, r))
 		return (vec3(1, 0, 0));
 	vec3 unit_dir = unit_vector(r.direction());
@@ -34,7 +34,7 @@ int main() {
 			float u = float(x) / float(width);
 			float v = float(y) / float(height);
 			ray r(origin, lower_left_corner + u*horizontal + v*vertical - origin);
-			vec3 col = color(r);
+			vec3 col = ray_color(r);
 			int ir = int(255.99*col[0]);
 			int ig = int(255.99*col[1]);
 			int ib = int(255.99*col[2]);

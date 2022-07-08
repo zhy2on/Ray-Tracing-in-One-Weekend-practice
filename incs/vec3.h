@@ -46,9 +46,9 @@ class vec3  {
         float e[3];
 };
 
-// // Type aliases for vec3
-// using point3 = vec3;   // 3D point
-// using color = vec3;    // RGB color
+// Type aliases for vec3
+using point3 = vec3;   // 3D point
+using color = vec3;    // RGB color
 
 inline std::istream& operator>>(std::istream &is, vec3 &t) {
     is >> t.e[0] >> t.e[1] >> t.e[2];
