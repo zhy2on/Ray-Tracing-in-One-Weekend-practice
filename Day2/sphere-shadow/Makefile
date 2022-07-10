@@ -8,7 +8,7 @@ INCFLAGS = -I$(INC_DIR)
 
 NAME = a.out
 
-INC_DIR = ../../incs/
+INC_DIR = ./incs/
 
 all: $(NAME)
 
