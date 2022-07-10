@@ -2,6 +2,7 @@ SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CXX = g++
+CXXFLAGS = -std=c++11 
 LIBFLAGS = -lSDL2
 INCFLAGS = -I$(INC_DIR)
 
